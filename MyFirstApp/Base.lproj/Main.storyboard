@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyFirstApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Радуйся каждому дню" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6qm-z0-bmb">
+                                <rect key="frame" x="16" y="127.00000000000001" width="358" height="38.666666666666671"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Укажите дату своего рождения:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQi-Cm-vzY">
+                                <rect key="frame" x="36" y="195.66666666666666" width="318" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQV-ON-gc4">
+                                <rect key="frame" x="135" y="545.66666666666663" width="120" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Gut-2X-xWf"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="aLC-wh-8lV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Результат">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resultButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="CYs-V6-Eg3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы наслеждаетесь жизнью уже ... дней" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0V-Pd-LE0">
+                                <rect key="frame" x="72" y="615.66666666666663" width="246" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="nSF-Ka-Me1">
+                                <rect key="frame" x="35" y="309.66666666666669" width="320" height="216.00000000000006"/>
+                                <connections>
+                                    <action selector="datePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="ias-2X-sFR"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6qm-z0-bmb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="1DG-SI-Uyu"/>
+                            <constraint firstItem="MQi-Cm-vzY" firstAttribute="top" secondItem="6qm-z0-bmb" secondAttribute="bottom" constant="30" id="6cO-RY-CiC"/>
+                            <constraint firstItem="B0V-Pd-LE0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="B7p-sx-Hur"/>
+                            <constraint firstItem="MQV-ON-gc4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cck-fe-F9I"/>
+                            <constraint firstItem="6qm-z0-bmb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V8e-TK-3EX"/>
+                            <constraint firstItem="nSF-Ka-Me1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vd5-lO-MYA"/>
+                            <constraint firstItem="B0V-Pd-LE0" firstAttribute="top" secondItem="MQV-ON-gc4" secondAttribute="bottom" constant="20" id="acQ-pV-hy3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B0V-Pd-LE0" secondAttribute="trailing" constant="72" id="gPs-W2-QAx"/>
+                            <constraint firstItem="nSF-Ka-Me1" firstAttribute="top" secondItem="MQi-Cm-vzY" secondAttribute="bottom" constant="90" id="nuT-7Q-yBH"/>
+                            <constraint firstItem="MQi-Cm-vzY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wDP-JI-EbG"/>
+                            <constraint firstItem="MQV-ON-gc4" firstAttribute="top" secondItem="nSF-Ka-Me1" secondAttribute="bottom" constant="20" id="wyb-QQ-jci"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="B0V-Pd-LE0" id="Hre-Q1-pIR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.43478260869566" y="-34.151785714285715"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
